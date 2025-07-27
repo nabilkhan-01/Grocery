@@ -5,15 +5,15 @@ function App() {
   // Function to share grocery list
   const shareGroceryList = () => {
     // Create a more family-friendly format
-    const shareText = "Family Grocery List:\n\n" + 
+    const shareText = "Grocery List:\n\n" + 
       groceries.map(item => 
         `${item.purchased ? '✓' : '□'} ${item.name} - ${item.quantity} ${item.unit}`
       ).join('\n') + 
-      "\n\nShared from our Family Grocery App";
+      "\n\nShared from Grocery App";
     
     if (navigator.share) {
       navigator.share({
-        title: 'Family Grocery List',
+        title: 'Grocery List',
         text: shareText
       }).catch(err => {
         console.error('Error sharing:', err);
@@ -106,7 +106,7 @@ function App() {
       <h1>Grocery List</h1>
       
       <div className="button-row">
-        <button onClick={shareGroceryList} className="share-button">Share with Family</button>
+        <button onClick={shareGroceryList} className="share-button">Share Grocery List</button>
       </div>
       
       <form onSubmit={addGroceryItem} className="grocery-form">
