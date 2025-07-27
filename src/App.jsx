@@ -102,14 +102,14 @@ function App() {
   }
 
   return (
-    <div className="todo-app">
+    <div className="grocery-app">
       <h1>Grocery List</h1>
       
       <div className="button-row">
         <button onClick={shareGroceryList} className="share-button">Share with Family</button>
       </div>
       
-      <form onSubmit={addGroceryItem} className="todo-form">
+      <form onSubmit={addGroceryItem} className="grocery-form">
         <div className="form-row">
           <input
             type="text"
@@ -143,12 +143,12 @@ function App() {
         </div>
       </form>
 
-      <ul className="todo-list">
+      <ul className="grocery-list">
         {groceries.length === 0 ? (
           <p className="empty-message">No grocery items yet! Add one above.</p>
         ) : (
           groceries.map(item => (
-            <li key={item.id} className={`todo-item ${item.purchased ? 'completed' : ''}`}>
+            <li key={item.id} className={`grocery-item ${item.purchased ? 'completed' : ''}`}>
               {editingId === item.id ? (
                 <div className="edit-form">
                   <div className="form-row">
@@ -183,18 +183,18 @@ function App() {
                 </div>
               ) : (
                 <>
-                  <div className="todo-text-container">
+                  <div className="grocery-text-container">
                     <input
                       type="checkbox"
                       checked={item.purchased}
                       onChange={() => togglePurchased(item.id)}
-                      className="todo-checkbox"
+                      className="grocery-checkbox"
                     />
-                    <span className="todo-text">
+                    <span className="grocery-text">
                       {item.name} - {item.quantity} {item.unit}
                     </span>
                   </div>
-                  <div className="todo-actions">
+                  <div className="grocery-actions">
                     <button onClick={() => startEditing(item)} className="edit-button">Edit</button>
                     <button onClick={() => deleteGroceryItem(item.id)} className="delete-button">Delete</button>
                   </div>

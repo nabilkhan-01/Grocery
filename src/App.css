@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.todo-app {
+.grocery-app {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ h1 {
   font-size: 2rem;
 }
 
-.todo-form {
+.grocery-form {
   margin-bottom: 1.5rem;
   width: 100%;
 }
@@ -111,13 +111,13 @@ h1 {
   background-color: #3a46c2;
 }
 
-.todo-list {
+.grocery-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.todo-item {
+.grocery-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,37 +126,37 @@ h1 {
   transition: background-color 0.2s;
 }
 
-.todo-item:last-child {
+.grocery-item:last-child {
   border-bottom: none;
 }
 
-.todo-item:hover {
+.grocery-item:hover {
   background-color: #f9f9f9;
 }
 
-.todo-item.completed .todo-text {
+.grocery-item.completed .grocery-text {
   text-decoration: line-through;
   color: #888;
 }
 
-.todo-text-container {
+.grocery-text-container {
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-.todo-checkbox {
+.grocery-checkbox {
   margin-right: 10px;
   cursor: pointer;
   width: 18px;
   height: 18px;
 }
 
-.todo-text {
+.grocery-text {
   font-size: 1rem;
 }
 
-.todo-actions {
+.grocery-actions {
   display: flex;
   gap: 0.5rem;
 }
@@ -245,7 +245,7 @@ h1 {
     padding: 1rem 0.5rem;
   }
 
-  .todo-app {
+  .grocery-app {
     padding: 1.5rem 1rem;
   }
   
@@ -278,16 +278,16 @@ h1 {
     max-width: 100%;
   }
   
-  .todo-item {
+  .grocery-item {
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .todo-text {
+  .grocery-text {
     margin-bottom: 0.5rem;
   }
   
-  .todo-actions {
+  .grocery-actions {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -301,7 +301,7 @@ h1 {
     padding: 1.5rem 1rem;
   }
 
-  .todo-app {
+  .grocery-app {
     padding: 1.5rem;
   }
 
